@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Game/Scenes/Q3.unity
+    path: Assets/Game/Scenes/ConfigEscenas/EscenaFuncionBase(NoModificar).unity
     guid: d97c49b84d99f4045856734c662a6e9e
   - enabled: 1
-    path: Assets/Game/Scenes/Escena2.unity
+    path: Assets/Game/Scenes/EscenasTaller3/Escena1.unity
     guid: 47c2edad52ff7e64880f65cbce9c3d09
   - enabled: 0
-    path: Assets/Game/Scenes/TareaC3/SampleScene.unity
+    path: Assets/Game/Scenes/ConfigEscenas/TareaC3/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
