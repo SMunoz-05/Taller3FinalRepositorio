@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;  
     private int score = 0;
 
+    public GameObject nextSceneTrigger;
     private void Awake()
     {
   
@@ -101,8 +102,38 @@ public class GameManager : MonoBehaviour
             this.health += health;  
         }
     }
+    public void TryGoToNextScene()
+    {
+        if (score >= 80)
+        {
+            if (nextSceneTrigger != null)
+            {
+                string sceneName = nextSceneTrigger.name;
 
-    public void RecolectarObjeto(GameObject objeto)
+                // Verificar si la escena está en Build Settings
+                int sceneBuildIndex = SceneUtility.GetBuildIndexByScenePath(sceneName + ".unity");
+
+                if (sceneBuildIndex == -1)
+                {
+                    Debug.LogWarning("La escena \"" + sceneName + "\" no se encuentra en Build Settings o no existe.");
+                }
+                else
+                {
+                    SceneManager.LoadScene(sceneName);
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Next scene trigger no asignado en inspector.");
+            }
+        }
+        else
+        {
+            Debug.Log("No tienes el suficiente puntaje para cambiar de escena.");
+        }
+    }
+
+public void RecolectarObjeto(GameObject objeto)
     {
         Destroy(objeto); 
         recolectados++;
