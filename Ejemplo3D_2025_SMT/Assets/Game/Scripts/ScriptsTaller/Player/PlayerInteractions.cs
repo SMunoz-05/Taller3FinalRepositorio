@@ -40,7 +40,7 @@ public class PlayerInteractions : MonoBehaviour
 
         if (other.gameObject.CompareTag("DeathFloor"))
         {
-            GameManager.Instance.LoseHealth(20);
+            GameManager.Instance.LoseHealth(34);
 
             GetComponent<CharacterController>().enabled = false;
             gameObject.transform.position = startPosition.position;
