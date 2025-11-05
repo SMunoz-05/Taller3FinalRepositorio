@@ -1,0 +1,9 @@
+# Ignorar archivos grandes de skybox
+Assets/AurynSky/Real Stars Skybox/StarSkybox04/CubemapStars.cubemap
+Assets/AurynSky/Real Stars Skybox/StarSkybox04Named/CubemapStarsNamed.cubemap
+Assets/AurynSky/Real Stars Skybox/StarSkybox04NamedConstell/CubemapStarsNamedConstellations.cubemap
+# Ignorar cubemaps gigantes
+*.cubemap
+*.exr
+*.hdr
+*.unitypackage
